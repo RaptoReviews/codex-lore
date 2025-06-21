@@ -173,3 +173,35 @@ blockquote {
   border-left: 3px solid;
   padding-left: 1rem;
 }
+
+/* Styles for the decaying text effect in mockingbird.html */
+.mockingbird-chorus {
+  /* This container targets only the repeating lines */
+  display: flex;
+  flex-direction: column;
+}
+
+.mockingbird-chorus .dialogue {
+  /* Reduce the default spacing between these specific lines */
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  line-height: 1.4; /* Tighten line height slightly */
+}
+
+.mockingbird-chorus .line:nth-child(n+3) {
+  opacity: 0.95;
+  transform: translateX(2px) rotate(-0.2deg);
+}
+
+.mockingbird-chorus .line:nth-child(n+6) {
+  opacity: 0.8;
+  transform: translateX(-3px) rotate(0.4deg);
+  letter-spacing: 0.5px;
+}
+
+.mockingbird-chorus .line:nth-child(n+8) {
+  opacity: 0.6;
+  transform: translateX(4px) rotate(-0.7deg);
+  letter-spacing: 1.5px;
+  filter: blur(0.4px);
+}
